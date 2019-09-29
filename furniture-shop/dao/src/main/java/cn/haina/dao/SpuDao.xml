@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.SpuDao">
+
+    <resultMap type="cn.haina.entity.Spu" id="SpuMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="spuName" column="spu_name" jdbcType="VARCHAR"/>
+        <result property="repertoryNumber" column="repertory_number" jdbcType="INTEGER"/>
+        <result property="salesNumber" column="sales_number" jdbcType="INTEGER"/>
+        <result property="marketPrice" column="market_price" jdbcType="NUMERIC"/>
+        <result property="originalPrice" column="original_price" jdbcType="NUMERIC"/>
+        <result property="uploadTime" column="upload_time" jdbcType="TIMESTAMP"/>
+        <result property="underTime" column="under_time" jdbcType="TIMESTAMP"/>
+        <result property="delStatus" column="del_status" jdbcType="INTEGER"/>
+        <result property="sortId" column="sort_id" jdbcType="INTEGER"/>
+        <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateUser" column="update_user" jdbcType="VARCHAR"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="SpuMap">
+        select
+          id, spu_name, repertory_number, sales_number, market_price, original_price, upload_time, under_time, del_status, sort_id, create_user, create_date, update_user, update_date
+        from furniture.spu
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SpuMap">
+        select
+          id, spu_name, repertory_number, sales_number, market_price, original_price, upload_time, under_time, del_status, sort_id, create_user, create_date, update_user, update_date
+        from furniture.spu
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SpuMap">
+        select
+          id, spu_name, repertory_number, sales_number, market_price, original_price, upload_time, under_time, del_status, sort_id, create_user, create_date, update_user, update_date
+        from furniture.spu
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="spuName != null and spuName != ''">
+                and spu_name = #{spuName}
+            </if>
+            <if test="repertoryNumber != null">
+                and repertory_number = #{repertoryNumber}
+            </if>
+            <if test="salesNumber != null">
+                and sales_number = #{salesNumber}
+            </if>
+            <if test="marketPrice != null">
+                and market_price = #{marketPrice}
+            </if>
+            <if test="originalPrice != null">
+                and original_price = #{originalPrice}
+            </if>
+            <if test="uploadTime != null">
+                and upload_time = #{uploadTime}
+            </if>
+            <if test="underTime != null">
+                and under_time = #{underTime}
+            </if>
+            <if test="delStatus != null">
+                and del_status = #{delStatus}
+            </if>
+            <if test="sortId != null">
+                and sort_id = #{sortId}
+            </if>
+            <if test="createUser != null and createUser != ''">
+                and create_user = #{createUser}
+            </if>
+            <if test="createDate != null">
+                and create_date = #{createDate}
+            </if>
+            <if test="updateUser != null and updateUser != ''">
+                and update_user = #{updateUser}
+            </if>
+            <if test="updateDate != null">
+                and update_date = #{updateDate}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into furniture.spu(spu_name, repertory_number, sales_number, market_price, original_price, upload_time, under_time, del_status, sort_id, create_user, create_date, update_user, update_date)
+        values (#{spuName}, #{repertoryNumber}, #{salesNumber}, #{marketPrice}, #{originalPrice}, #{uploadTime}, #{underTime}, #{delStatus}, #{sortId}, #{createUser}, #{createDate}, #{updateUser}, #{updateDate})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update furniture.spu
+        <set>
+            <if test="spuName != null and spuName != ''">
+                spu_name = #{spuName},
+            </if>
+            <if test="repertoryNumber != null">
+                repertory_number = #{repertoryNumber},
+            </if>
+            <if test="salesNumber != null">
+                sales_number = #{salesNumber},
+            </if>
+            <if test="marketPrice != null">
+                market_price = #{marketPrice},
+            </if>
+            <if test="originalPrice != null">
+                original_price = #{originalPrice},
+            </if>
+            <if test="uploadTime != null">
+                upload_time = #{uploadTime},
+            </if>
+            <if test="underTime != null">
+                under_time = #{underTime},
+            </if>
+            <if test="delStatus != null">
+                del_status = #{delStatus},
+            </if>
+            <if test="sortId != null">
+                sort_id = #{sortId},
+            </if>
+            <if test="createUser != null and createUser != ''">
+                create_user = #{createUser},
+            </if>
+            <if test="createDate != null">
+                create_date = #{createDate},
+            </if>
+            <if test="updateUser != null and updateUser != ''">
+                update_user = #{updateUser},
+            </if>
+            <if test="updateDate != null">
+                update_date = #{updateDate},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from furniture.spu where id = #{id}
+    </delete>
+
+</mapper>

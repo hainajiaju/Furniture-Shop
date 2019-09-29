@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.OptionDao">
+
+    <resultMap type="cn.haina.entity.Option" id="OptionMap">
+        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="attributeId" column="attribute_id" jdbcType="LONG INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="OptionMap">
+        select
+          id, name, attribute_id
+        from furniture.option
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="OptionMap">
+        select
+          id, name, attribute_id
+        from furniture.option
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="OptionMap">
+        select
+          id, name, attribute_id
+        from furniture.option
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="attributeId != null">
+                and attribute_id = #{attributeId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into furniture.option(name, attribute_id)
+        values (#{name}, #{attributeId})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update furniture.option
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="attributeId != null">
+                attribute_id = #{attributeId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from furniture.option where id = #{id}
+    </delete>
+
+</mapper>
