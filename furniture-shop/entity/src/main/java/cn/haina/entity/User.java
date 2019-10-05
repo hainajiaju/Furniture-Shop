@@ -92,4 +92,17 @@ public class User implements Serializable {
         this.extiis = extiis;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", nicheng='" + nicheng + '\'' +
+                ", touxiang='" + touxiang + '\'' +
+                ", areaId=" + areaId +
+                ", type=" + type +
+                ", extiis=" + extiis +
+                '}';
+    }
 }

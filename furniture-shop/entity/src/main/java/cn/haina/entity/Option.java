@@ -16,7 +16,16 @@ public class Option implements Serializable {
     private String name;
     //属性id
     private Long attributeId;
+    //当前选项价格
+    private double price;
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public Long getId() {
         return id;
@@ -42,4 +51,13 @@ public class Option implements Serializable {
         this.attributeId = attributeId;
     }
 
+    @Override
+    public String toString() {
+        return "Option{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", attributeId=" + attributeId +
+                ", price=" + price +
+                '}';
+    }
 }

@@ -16,7 +16,16 @@ public class Sort implements Serializable {
     private String name;
     //父级分类
     private Long parentId;
+    //父级名称
+    private String parentName;
 
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
+    }
 
     public Long getId() {
         return id;

@@ -14,9 +14,6 @@ public class Specificationclub implements Serializable {
     private Long id;
     //规格名字
     private String name;
-    //分类id
-    private Long sortId;
-
 
     public Long getId() {
         return id;
@@ -33,13 +30,4 @@ public class Specificationclub implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Long getSortId() {
-        return sortId;
-    }
-
-    public void setSortId(Long sortId) {
-        this.sortId = sortId;
-    }
-
 }

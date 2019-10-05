@@ -14,9 +14,6 @@ public class Specification implements Serializable {
     private Long id;
     //规格组名
     private String name;
-    //规格组id
-    private String specificationclubId;
-
 
     public Long getId() {
         return id;
@@ -34,12 +31,11 @@ public class Specification implements Serializable {
         this.name = name;
     }
 
-    public String getSpecificationclubId() {
-        return specificationclubId;
+    @Override
+    public String toString() {
+        return "Specification{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
-
-    public void setSpecificationclubId(String specificationclubId) {
-        this.specificationclubId = specificationclubId;
-    }
-
 }

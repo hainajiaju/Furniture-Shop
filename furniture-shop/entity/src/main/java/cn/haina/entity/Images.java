@@ -62,4 +62,14 @@ public class Images implements Serializable {
         this.spuId = spuId;
     }
 
+    @Override
+    public String toString() {
+        return "Images{" +
+                "id=" + id +
+                ", bigImage='" + bigImage + '\'' +
+                ", centerImage='" + centerImage + '\'' +
+                ", smallImage='" + smallImage + '\'' +
+                ", spuId=" + spuId +
+                '}';
+    }
 }

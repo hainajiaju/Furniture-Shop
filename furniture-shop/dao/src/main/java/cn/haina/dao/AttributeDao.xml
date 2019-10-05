@@ -5,66 +5,85 @@
     <resultMap type="cn.haina.entity.Attribute" id="AttributeMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
-        <result property="sortId" column="sort_id" jdbcType="LONG INTEGER"/>
+        <result property="sortId" column="sort_id"/>
+        <collection property="optionsList" ofType="cn.haina.entity.Option">
+            <id property="id" column="oid"></id>
+            <result property="name" column="oname"/>
+            <result property="attributeId" column="oattribute_id"/>
+            <result property="price" column="oprice"/>
+        </collection>
+        <collection property="imagesList" ofType="cn.haina.entity.Images">
+            <id property="id" column="imgid"></id>
+            <result property="bigImage" column="imgbig"/>
+            <result property="centerImage" column="imgcenter"/>
+            <result property="smallImage" column="imgsmall"/>
+        </collection>
     </resultMap>
 
-    <!--查询单个-->
-    <select id="queryById" resultMap="AttributeMap">
-        select
-          id, name, sort_id
-        from furniture.attribute
-        where id = #{id}
+    <!--通过商品ID查询属性和属性下的选项数据以及每个选项对应图片-->
+    <select id="queryAllBySortId" resultMap="AttributeMap">
+        select a.*,o.id oid,o.name oname,o.price oprice,img.id imgid,img.big_image imgbig,img.small_image imgsmall,img.center_image imgcenter
+        from attribute a,`option` o,images img
+        where sort_id = (select sort_id from spu where id = #{id}) and o.attribute_id = a.id
+			and img.id = (select image_id from skuimages skuimg where skuimg.sku_id = (select sku_id from attributeoption where option_id = o.id))
     </select>
+    <!--&lt;!&ndash;查询单个&ndash;&gt;-->
+    <!--<select id="queryById" resultMap="AttributeMap">-->
+        <!--select-->
+          <!--id, name, sort_id-->
+        <!--from furniture.attribute-->
+        <!--where id = #{id}-->
+    <!--</select>-->
 
-    <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="AttributeMap">
-        select
-          id, name, sort_id
-        from furniture.attribute
-        limit #{offset}, #{limit}
-    </select>
+    <!--&lt;!&ndash;查询指定行数据&ndash;&gt;-->
+    <!--<select id="queryAllByLimit" resultMap="AttributeMap">-->
+        <!--select-->
+          <!--id, name, sort_id-->
+        <!--from furniture.attribute-->
+        <!--limit #{offset}, #{limit}-->
+    <!--</select>-->
 
-    <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="AttributeMap">
-        select
-          id, name, sort_id
-        from furniture.attribute
-        <where>
-            <if test="id != null">
-                and id = #{id}
-            </if>
-            <if test="name != null and name != ''">
-                and name = #{name}
-            </if>
-            <if test="sortId != null">
-                and sort_id = #{sortId}
-            </if>
-        </where>
-    </select>
+    <!--&lt;!&ndash;通过实体作为筛选条件查询&ndash;&gt;-->
+    <!--<select id="queryAll" resultMap="AttributeMap">-->
+        <!--select-->
+          <!--id, name, sort_id-->
+        <!--from furniture.attribute-->
+        <!--<where>-->
+            <!--<if test="id != null">-->
+                <!--and id = #{id}-->
+            <!--</if>-->
+            <!--<if test="name != null and name != ''">-->
+                <!--and name = #{name}-->
+            <!--</if>-->
+            <!--<if test="sortId != null">-->
+                <!--and sort_id = #{sortId}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
 
-    <!--新增所有列-->
-    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into furniture.attribute(name, sort_id)
-        values (#{name}, #{sortId})
-    </insert>
+    <!--&lt;!&ndash;新增所有列&ndash;&gt;-->
+    <!--<insert id="insert" keyProperty="id" useGeneratedKeys="true">-->
+        <!--insert into furniture.attribute(name, sort_id)-->
+        <!--values (#{name}, #{sortId})-->
+    <!--</insert>-->
 
-    <!--通过主键修改数据-->
-    <update id="update">
-        update furniture.attribute
-        <set>
-            <if test="name != null and name != ''">
-                name = #{name},
-            </if>
-            <if test="sortId != null">
-                sort_id = #{sortId},
-            </if>
-        </set>
-        where id = #{id}
-    </update>
+    <!--&lt;!&ndash;通过主键修改数据&ndash;&gt;-->
+    <!--<update id="update">-->
+        <!--update furniture.attribute-->
+        <!--<set>-->
+            <!--<if test="name != null and name != ''">-->
+                <!--name = #{name},-->
+            <!--</if>-->
+            <!--<if test="sortId != null">-->
+                <!--sort_id = #{sortId},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--where id = #{id}-->
+    <!--</update>-->
 
-    <!--通过主键删除-->
-    <delete id="deleteById">
-        delete from furniture.attribute where id = #{id}
-    </delete>
+    <!--&lt;!&ndash;通过主键删除&ndash;&gt;-->
+    <!--<delete id="deleteById">-->
+        <!--delete from furniture.attribute where id = #{id}-->
+    <!--</delete>-->
 
 </mapper>

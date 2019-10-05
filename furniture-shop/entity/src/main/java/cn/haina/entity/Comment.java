@@ -33,7 +33,16 @@ public class Comment implements Serializable {
     private String updateUser;
     //修改时间
     private Date updateDate;
+    //用户实体类属性
+    private User user;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Long getId() {
         return id;
@@ -123,4 +132,21 @@ public class Comment implements Serializable {
         this.updateDate = updateDate;
     }
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", content='" + content + '\'' +
+                ", commentDate=" + commentDate +
+                ", spuId=" + spuId +
+                ", orderId=" + orderId +
+                ", commentImage='" + commentImage + '\'' +
+                ", createUser='" + createUser + '\'' +
+                ", createDate=" + createDate +
+                ", updateUser='" + updateUser + '\'' +
+                ", updateDate=" + updateDate +
+                ", user=" + user +
+                '}';
+    }
 }

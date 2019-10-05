@@ -39,7 +39,16 @@ public class Spu implements Serializable {
     private String updateUser;
     //修改时间
     private Date updateDate;
+    //默认图片
+    private String defaultImg;
 
+    public String getDefaultImg() {
+        return defaultImg;
+    }
+
+    public void setDefaultImg(String defaultImg) {
+        this.defaultImg = defaultImg;
+    }
 
     public Integer getId() {
         return id;
@@ -153,4 +162,23 @@ public class Spu implements Serializable {
         this.updateDate = updateDate;
     }
 
+    @Override
+    public String toString() {
+        return "Spu{" +
+                "id=" + id +
+                ", spuName='" + spuName + '\'' +
+                ", repertoryNumber=" + repertoryNumber +
+                ", salesNumber=" + salesNumber +
+                ", marketPrice=" + marketPrice +
+                ", originalPrice=" + originalPrice +
+                ", uploadTime=" + uploadTime +
+                ", underTime=" + underTime +
+                ", delStatus=" + delStatus +
+                ", sortId=" + sortId +
+                ", createUser='" + createUser + '\'' +
+                ", createDate=" + createDate +
+                ", updateUser='" + updateUser + '\'' +
+                ", updateDate=" + updateDate +
+                '}';
+    }
 }

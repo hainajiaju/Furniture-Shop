@@ -3,75 +3,86 @@
 <mapper namespace="cn.haina.dao.SpecificationoptionDao">
 
     <resultMap type="cn.haina.entity.Specificationoption" id="SpecificationoptionMap">
-        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="id" column="id"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="specificationId" column="specification_id" jdbcType="VARCHAR"/>
         <result property="specificationclubId" column="specificationclub_id" jdbcType="VARCHAR"/>
+        <result property="specificationclubName" column="clubname"/>
+        <collection property="specificationList" ofType="cn.haina.entity.Specification">
+            <result property="name" column="cationname"/>
+        </collection>
     </resultMap>
-
-    <!--查询单个-->
-    <select id="queryById" resultMap="SpecificationoptionMap">
-        select
-          id, name, specification_id, specificationclub_id
-        from furniture.specificationoption
-        where id = #{id}
+    <!--通过spuid查询规格组合规格所有信息-->
+    <select id="queryAllBySpuId" resultMap="SpecificationoptionMap">
+        select speclub.id,speclub.name clubname,specation.name cationname
+        from specificationoption speoption,specificationclub speclub,specification specation
+        where specificationclub_id in (select specificationclub_id from specificationoption
+        where id in (select specificationoption_id from spuspecificationoption where spu_id = #{spuid}))
+        and speoption.specificationclub_id = speclub.id and speoption.specification_id = specation.id
     </select>
+    <!--&lt;!&ndash;查询单个&ndash;&gt;-->
+    <!--<select id="queryById" resultMap="SpecificationoptionMap">-->
+        <!--select-->
+          <!--id, name, specification_id, specificationclub_id-->
+        <!--from furniture.specificationoption-->
+        <!--where id = #{id}-->
+    <!--</select>-->
 
-    <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="SpecificationoptionMap">
-        select
-          id, name, specification_id, specificationclub_id
-        from furniture.specificationoption
-        limit #{offset}, #{limit}
-    </select>
+    <!--&lt;!&ndash;查询指定行数据&ndash;&gt;-->
+    <!--<select id="queryAllByLimit" resultMap="SpecificationoptionMap">-->
+        <!--select-->
+          <!--id, name, specification_id, specificationclub_id-->
+        <!--from furniture.specificationoption-->
+        <!--limit #{offset}, #{limit}-->
+    <!--</select>-->
 
-    <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="SpecificationoptionMap">
-        select
-          id, name, specification_id, specificationclub_id
-        from furniture.specificationoption
-        <where>
-            <if test="id != null">
-                and id = #{id}
-            </if>
-            <if test="name != null and name != ''">
-                and name = #{name}
-            </if>
-            <if test="specificationId != null and specificationId != ''">
-                and specification_id = #{specificationId}
-            </if>
-            <if test="specificationclubId != null and specificationclubId != ''">
-                and specificationclub_id = #{specificationclubId}
-            </if>
-        </where>
-    </select>
+    <!--&lt;!&ndash;通过实体作为筛选条件查询&ndash;&gt;-->
+    <!--<select id="queryAll" resultMap="SpecificationoptionMap">-->
+        <!--select-->
+          <!--id, name, specification_id, specificationclub_id-->
+        <!--from furniture.specificationoption-->
+        <!--<where>-->
+            <!--<if test="id != null">-->
+                <!--and id = #{id}-->
+            <!--</if>-->
+            <!--<if test="name != null and name != ''">-->
+                <!--and name = #{name}-->
+            <!--</if>-->
+            <!--<if test="specificationId != null and specificationId != ''">-->
+                <!--and specification_id = #{specificationId}-->
+            <!--</if>-->
+            <!--<if test="specificationclubId != null and specificationclubId != ''">-->
+                <!--and specificationclub_id = #{specificationclubId}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
 
-    <!--新增所有列-->
-    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into furniture.specificationoption(name, specification_id, specificationclub_id)
-        values (#{name}, #{specificationId}, #{specificationclubId})
-    </insert>
+    <!--&lt;!&ndash;新增所有列&ndash;&gt;-->
+    <!--<insert id="insert" keyProperty="id" useGeneratedKeys="true">-->
+        <!--insert into furniture.specificationoption(name, specification_id, specificationclub_id)-->
+        <!--values (#{name}, #{specificationId}, #{specificationclubId})-->
+    <!--</insert>-->
 
-    <!--通过主键修改数据-->
-    <update id="update">
-        update furniture.specificationoption
-        <set>
-            <if test="name != null and name != ''">
-                name = #{name},
-            </if>
-            <if test="specificationId != null and specificationId != ''">
-                specification_id = #{specificationId},
-            </if>
-            <if test="specificationclubId != null and specificationclubId != ''">
-                specificationclub_id = #{specificationclubId},
-            </if>
-        </set>
-        where id = #{id}
-    </update>
+    <!--&lt;!&ndash;通过主键修改数据&ndash;&gt;-->
+    <!--<update id="update">-->
+        <!--update furniture.specificationoption-->
+        <!--<set>-->
+            <!--<if test="name != null and name != ''">-->
+                <!--name = #{name},-->
+            <!--</if>-->
+            <!--<if test="specificationId != null and specificationId != ''">-->
+                <!--specification_id = #{specificationId},-->
+            <!--</if>-->
+            <!--<if test="specificationclubId != null and specificationclubId != ''">-->
+                <!--specificationclub_id = #{specificationclubId},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--where id = #{id}-->
+    <!--</update>-->
 
-    <!--通过主键删除-->
-    <delete id="deleteById">
-        delete from furniture.specificationoption where id = #{id}
-    </delete>
+    <!--&lt;!&ndash;通过主键删除&ndash;&gt;-->
+    <!--<delete id="deleteById">-->
+        <!--delete from furniture.specificationoption where id = #{id}-->
+    <!--</delete>-->
 
 </mapper>

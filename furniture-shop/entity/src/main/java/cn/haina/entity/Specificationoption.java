@@ -1,6 +1,7 @@
 package cn.haina.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 商品规格选项表(Specificationoption)实体类
@@ -12,13 +13,30 @@ public class Specificationoption implements Serializable {
     private static final long serialVersionUID = -21191510844850469L;
     //规格选项
     private Long id;
-    //规格选项名
-    private String name;
     //规格id
-    private String specificationId;
+    private Long specificationId;
     //规格组id
-    private String specificationclubId;
+    private Long specificationclubId;
+    //规格组名称
+    private String specificationclubName;
+    //规格集合
+    private List<Specification> specificationList;
 
+    public String getSpecificationclubName() {
+        return specificationclubName;
+    }
+
+    public void setSpecificationclubName(String specificationclubName) {
+        this.specificationclubName = specificationclubName;
+    }
+
+    public List<Specification> getSpecificationList() {
+        return specificationList;
+    }
+
+    public void setSpecificationList(List<Specification> specificationList) {
+        this.specificationList = specificationList;
+    }
 
     public Long getId() {
         return id;
@@ -28,28 +46,30 @@ public class Specificationoption implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSpecificationId() {
+    public Long getSpecificationId() {
         return specificationId;
     }
 
-    public void setSpecificationId(String specificationId) {
+    public void setSpecificationId(Long specificationId) {
         this.specificationId = specificationId;
     }
 
-    public String getSpecificationclubId() {
+    public Long getSpecificationclubId() {
         return specificationclubId;
     }
 
-    public void setSpecificationclubId(String specificationclubId) {
+    public void setSpecificationclubId(Long specificationclubId) {
         this.specificationclubId = specificationclubId;
     }
 
+    @Override
+    public String toString() {
+        return "Specificationoption{" +
+                "id=" + id +
+                ", specificationId=" + specificationId +
+                ", specificationclubId=" + specificationclubId +
+                ", specificationclubName='" + specificationclubName + '\'' +
+                ", specificationList=" + specificationList +
+                '}';
+    }
 }

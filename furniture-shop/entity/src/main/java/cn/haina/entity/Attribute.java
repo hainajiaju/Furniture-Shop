@@ -1,6 +1,7 @@
 package cn.haina.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 商品属性表(Attribute)实体类
@@ -16,7 +17,37 @@ public class Attribute implements Serializable {
     private String name;
     //分类id
     private Long sortId;
+    //属性选项集合
+    private List<Option> optionsList;
+    //sku图片集合
+    private List<Images> imagesList;
 
+    @Override
+    public String toString() {
+        return "Attribute{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sortId=" + sortId +
+                ", optionsList=" + optionsList +
+                ", imagesList=" + imagesList +
+                '}';
+    }
+
+    public List<Images> getImagesList() {
+        return imagesList;
+    }
+
+    public void setImagesList(List<Images> imagesList) {
+        this.imagesList = imagesList;
+    }
+
+    public List<Option> getOptionsList() {
+        return optionsList;
+    }
+
+    public void setOptionsList(List<Option> optionsList) {
+        this.optionsList = optionsList;
+    }
 
     public Integer getId() {
         return id;
