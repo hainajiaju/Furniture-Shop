@@ -14,11 +14,11 @@
     </resultMap>
     <!--通过spuid查询规格组合规格所有信息-->
     <select id="queryAllBySpuId" resultMap="SpecificationoptionMap">
-        select speclub.id,speclub.name clubname,specation.name cationname
-        from specificationoption speoption,specificationclub speclub,specification specation
-        where specificationclub_id in (select specificationclub_id from specificationoption
-        where id in (select specificationoption_id from spuspecificationoption where spu_id = #{spuid}))
-        and speoption.specificationclub_id = speclub.id and speoption.specification_id = specation.id
+        select specificationclub.name clubname,specification.name cationname
+        from specification,specificationclub,specificationoption
+        where specificationoption.specificationclub_id=specificationclub.id
+        and specificationoption.specification_id=specification.id
+        and specificationoption.id in (select specificationoption_id from spuspecificationoption where spu_id=#{spuid})
     </select>
     <!--&lt;!&ndash;查询单个&ndash;&gt;-->
     <!--<select id="queryById" resultMap="SpecificationoptionMap">-->

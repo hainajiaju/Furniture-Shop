@@ -16,6 +16,16 @@ public class DetailsUtil {
         this.imgPic = imgPic;
     }
 
+    @Override
+    public String toString() {
+        return "DetailsUtil{" +
+                "spuId=" + spuId +
+                ", price=" + price +
+                ", name='" + name + '\'' +
+                ", imgPic='" + imgPic + '\'' +
+                '}';
+    }
+
     public DetailsUtil() {
     }
 

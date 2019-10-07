@@ -1,19 +1,26 @@
-//package cn.haina.dao;
-//
-//import cn.haina.entity.Shoppingcart;
-//import org.apache.ibatis.annotations.Mapper;
-//import org.apache.ibatis.annotations.Param;
-//import java.util.List;
-//
-///**
-// * 购物车表(Shoppingcart)表数据库访问层
-// *
-// * @author makejava
-// * @since 2019-09-29 11:17:53
-// */
-//@Mapper
-//public interface ShoppingcartDao {
-//
+package cn.haina.dao;
+
+import cn.haina.entity.Shoppingcart;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import java.util.List;
+
+/**
+ * 购物车表(Shoppingcart)表数据库访问层
+ *
+ * @author makejava
+ * @since 2019-09-29 11:17:53
+ */
+@Mapper
+public interface ShoppingcartDao {
+     /**
+     * 添加购物车并返回主键
+     *
+     * @param shoppingcart 实例对象
+     * @return 影响行数
+     */
+    Integer addShoppingCart(Shoppingcart shoppingcart);
+
 //    /**
 //     * 通过ID查询单条数据
 //     *
@@ -63,5 +70,5 @@
 //     * @return 影响行数
 //     */
 //    int deleteById(Long id);
-//
-//}
+
+}

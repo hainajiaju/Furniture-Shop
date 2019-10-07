@@ -17,8 +17,9 @@ public class RedisUtil {
     //存值并返回最新五条
     public List<String> setDetails(String keys,String json){
         Jedis jedis = jedisPool.getResource();
-        jedis.lrem(keys,2,json);
+        jedis.lrem(keys,1,json);
         jedis.lpush(keys,json);
+        jedis.ltrim(keys,0,4);
         List<String> lrange = jedis.lrange(keys, 0, 4);
         return lrange;
     }

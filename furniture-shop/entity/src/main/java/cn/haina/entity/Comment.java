@@ -1,5 +1,8 @@
 package cn.haina.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.boot.jackson.JsonComponent;
+
 import java.util.Date;
 import java.io.Serializable;
 
@@ -18,6 +21,7 @@ public class Comment implements Serializable {
     //评论内容
     private String content;
     //评论日期
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date commentDate;
     //商品id
     private Long spuId;

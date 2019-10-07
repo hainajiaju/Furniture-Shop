@@ -2,13 +2,11 @@ package cn.haina.prodetails.controller;
 
 import cn.haina.entity.*;
 import cn.haina.prodetails.service.*;
-import cn.haina.utils.DetailsUtil;
-import cn.haina.utils.MD5;
-import cn.haina.utils.RedisUtil;
-import cn.haina.utils.ResultUtil;
+import cn.haina.utils.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,10 +28,13 @@ public class SpuController {
     @Resource
     private CommentService commentService;
     @Resource
+    private ShoppingCartService shoppingCartService;
+    @Resource
     private RedisUtil redisUtil;
     //根据spuid返回商品详情信息
     @GetMapping("/detailsList/{spuid}")
     public ResultUtil detailsList(@PathVariable Integer spuid){
+        System.out.println("进入方法-=》》》》》》》》》》》》》》》》》》》》》》》》》");
         Map<String,Object> map = new HashMap<>();
         map.put("attributeList",getAttributeListBySpuid(spuid));
         map.put("sort",getSortBySpuid(spuid));
@@ -73,7 +74,7 @@ public class SpuController {
         String json = redisUtil.get("1");
         ObjectMapper objectMapper = new ObjectMapper();
         User user = objectMapper.readValue(json, User.class);
-        String keys = MD5.getMd5(user.getId()+user.getName(),24);
+        String keys = "details:"+ MD5.getMd5(user.getId()+user.getName(),24);
         DetailsUtil detailsUtil = new DetailsUtil(spu.getId(),spu.getMarketPrice(),spu.getSpuName(),spu.getDefaultImg());
         List<String> str = redisUtil.setDetails(keys,objectMapper.writeValueAsString(detailsUtil));
         List<DetailsUtil> detailsUtilsList = new ArrayList<>();
@@ -86,5 +87,28 @@ public class SpuController {
     public Spu getSpuByid(Integer spuid){
         Spu spu = spuService.queryImageById(spuid);
         return spu;
+    }
+    //加入购物车
+    @PostMapping("/addShoppingCart")
+    public ResultUtil addShoppingCart(@RequestBody ShoppingCartParamUtil shoppingCartParamUtil){
+        String json = redisUtil.get("1");
+        ObjectMapper objectMapper = new ObjectMapper();
+        User user = null;
+        try {
+            user = objectMapper.readValue(json, User.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Shoppingcart shoppingcart = new Shoppingcart();
+        shoppingcart.setSpuId(shoppingCartParamUtil.getSpuid().longValue());
+        shoppingcart.setNumber(shoppingCartParamUtil.getNumber());
+        shoppingcart.setStatus(0);
+        shoppingcart.setUserid(user.getId());
+        Integer num = shoppingCartService.addShoppingCart(shoppingcart, shoppingCartParamUtil.getOptionids());
+        if(num==1){
+            return ResultUtil.ok("成功!",num);
+        }else{
+            return ResultUtil.error("失败!");
+        }
     }
 }

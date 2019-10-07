@@ -23,6 +23,7 @@
     <select id="queryCommetBySpuId" resultMap="CommentMap">
         select c.content,c.comment_date,u.nicheng,u.touxiang from `comment` c,user u
         where spu_id = #{spuid} and c.user_id = u.id
+        order by comment_date desc
     </select>
     <!--&lt;!&ndash;查询单个&ndash;&gt;-->
     <!--<select id="queryById" resultMap="CommentMap">-->

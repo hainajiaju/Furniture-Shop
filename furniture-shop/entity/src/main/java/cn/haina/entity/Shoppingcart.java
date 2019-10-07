@@ -18,7 +18,16 @@ public class Shoppingcart implements Serializable {
     private Integer number;
     //状态
     private Integer status;
+    //用户id
+    private Long userid;
 
+    public Long getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Long userid) {
+        this.userid = userid;
+    }
 
     public Long getId() {
         return id;
