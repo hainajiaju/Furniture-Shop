@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.AttributeoptionDao">
+
+    <resultMap type="cn.haina.entity.Attributeoption" id="AttributeoptionMap">
+        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="optionId" column="option_id" jdbcType="LONG INTEGER"/>
+        <result property="attributeId" column="attribute_id" jdbcType="LONG INTEGER"/>
+        <result property="skuId" column="sku_id" jdbcType="LONG INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="AttributeoptionMap">
+        select
+          id, option_id, attribute_id, sku_id
+        from furniture.attributeoption
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="AttributeoptionMap">
+        select
+          id, option_id, attribute_id, sku_id
+        from furniture.attributeoption
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="AttributeoptionMap">
+        select
+          id, option_id, attribute_id, sku_id
+        from furniture.attributeoption
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="optionId != null">
+                and option_id = #{optionId}
+            </if>
+            <if test="attributeId != null">
+                and attribute_id = #{attributeId}
+            </if>
+            <if test="skuId != null">
+                and sku_id = #{skuId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into furniture.attributeoption(option_id, attribute_id, sku_id)
+        values (#{optionId}, #{attributeId}, #{skuId})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update furniture.attributeoption
+        <set>
+            <if test="optionId != null">
+                option_id = #{optionId},
+            </if>
+            <if test="attributeId != null">
+                attribute_id = #{attributeId},
+            </if>
+            <if test="skuId != null">
+                sku_id = #{skuId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from furniture.attributeoption where id = #{id}
+    </delete>
+
+</mapper>
