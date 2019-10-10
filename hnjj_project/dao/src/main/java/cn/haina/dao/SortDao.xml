@@ -12,6 +12,9 @@
         select s1.*,(select name from sort s2 where s2.id=s1.parent_id) parentName from sort s1 where id=
       (select sort_id from spu where id = #{spuid})
     </select>
+    <select id="getSortList" resultMap="SortMap">
+        SELECT id,name,parent_id FROM furniture.sort WHERE parent_id=#{parentId}
+    </select>
     <!--&lt;!&ndash;查询单个&ndash;&gt;-->
     <!--<select id="queryById" resultMap="SortMap">-->
         <!--select-->

@@ -82,7 +82,7 @@ public class UserController {
         User user=new User();
         user.setId(id.longValue());
         user.setName(name);
-        Map<String,Object> map=new HashMap<>();
+        Map<String,Object> map=new HashMap<String,Object>();
         int count=userService.updatePhone(user);
         if(count>0){
             return ResultUtil.success("修改手机号成功!");
@@ -96,7 +96,7 @@ public class UserController {
         User user=new User();
         user.setId(id.longValue());
         user.setPassword(password);
-        Map<String,Object> map=new HashMap<>();
+        Map<String,Object> map=new HashMap<String,Object>();
         int count=userService.updatePassword(user);
         if(count>0){
             return ResultUtil.success("修改密码成功!");

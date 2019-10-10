@@ -20,7 +20,7 @@ public interface SortDao {
      * @return 实例对象
      */
     Sort queryNameById(@Param("spuid") Long spuid);
-
+    List<Sort> getSortList(@Param("parentId") int parent_id);
 //    /**
 //     * 通过ID查询单条数据
 //     *
