@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.CommentDao">
+
+    <resultMap type="cn.haina.entity.Comment" id="CommentMap">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="commentDate" column="comment_date" jdbcType="TIMESTAMP"/>
+        <result property="spuId" column="spu_id"/>
+        <result property="orderId" column="order_id"/>
+        <result property="commentImage" column="comment_image" jdbcType="VARCHAR"/>
+        <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+        <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
+        <result property="updateUser" column="update_user" jdbcType="VARCHAR"/>
+        <result property="updateDate" column="update_date" jdbcType="TIMESTAMP"/>
+        <association property="user" javaType="cn.haina.entity.User">
+            <result property="nicheng" column="nicheng"/>
+            <result property="touxiang" column="touxiang"/>
+        </association>
+    </resultMap>
+    <!--根据spuid查询相关评论-->
+    <select id="queryCommetBySpuId" resultMap="CommentMap">
+        select c.content,c.comment_date,u.nicheng,u.touxiang from `comment` c,user u
+        where spu_id = #{spuid} and c.user_id = u.id
+        order by comment_date desc
+    </select>
+    <!--&lt;!&ndash;查询单个&ndash;&gt;-->
+    <!--<select id="queryById" resultMap="CommentMap">-->
+        <!--select-->
+          <!--id, user_id, content, comment_date, spu_id, order_id, comment_image, create_user, create_date, update_user, update_date-->
+        <!--from furniture.comment-->
+        <!--where id = #{id}-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash;查询指定行数据&ndash;&gt;-->
+    <!--<select id="queryAllByLimit" resultMap="CommentMap">-->
+        <!--select-->
+          <!--id, user_id, content, comment_date, spu_id, order_id, comment_image, create_user, create_date, update_user, update_date-->
+        <!--from furniture.comment-->
+        <!--limit #{offset}, #{limit}-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash;通过实体作为筛选条件查询&ndash;&gt;-->
+    <!--<select id="queryAll" resultMap="CommentMap">-->
+        <!--select-->
+          <!--id, user_id, content, comment_date, spu_id, order_id, comment_image, create_user, create_date, update_user, update_date-->
+        <!--from furniture.comment-->
+        <!--<where>-->
+            <!--<if test="id != null">-->
+                <!--and id = #{id}-->
+            <!--</if>-->
+            <!--<if test="userId != null">-->
+                <!--and user_id = #{userId}-->
+            <!--</if>-->
+            <!--<if test="content != null and content != ''">-->
+                <!--and content = #{content}-->
+            <!--</if>-->
+            <!--<if test="commentDate != null">-->
+                <!--and comment_date = #{commentDate}-->
+            <!--</if>-->
+            <!--<if test="spuId != null">-->
+                <!--and spu_id = #{spuId}-->
+            <!--</if>-->
+            <!--<if test="orderId != null">-->
+                <!--and order_id = #{orderId}-->
+            <!--</if>-->
+            <!--<if test="commentImage != null and commentImage != ''">-->
+                <!--and comment_image = #{commentImage}-->
+            <!--</if>-->
+            <!--<if test="createUser != null and createUser != ''">-->
+                <!--and create_user = #{createUser}-->
+            <!--</if>-->
+            <!--<if test="createDate != null">-->
+                <!--and create_date = #{createDate}-->
+            <!--</if>-->
+            <!--<if test="updateUser != null and updateUser != ''">-->
+                <!--and update_user = #{updateUser}-->
+            <!--</if>-->
+            <!--<if test="updateDate != null">-->
+                <!--and update_date = #{updateDate}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash;新增所有列&ndash;&gt;-->
+    <!--<insert id="insert" keyProperty="id" useGeneratedKeys="true">-->
+        <!--insert into furniture.comment(user_id, content, comment_date, spu_id, order_id, comment_image, create_user, create_date, update_user, update_date)-->
+        <!--values (#{userId}, #{content}, #{commentDate}, #{spuId}, #{orderId}, #{commentImage}, #{createUser}, #{createDate}, #{updateUser}, #{updateDate})-->
+    <!--</insert>-->
+
+    <!--&lt;!&ndash;通过主键修改数据&ndash;&gt;-->
+    <!--<update id="update">-->
+        <!--update furniture.comment-->
+        <!--<set>-->
+            <!--<if test="userId != null">-->
+                <!--user_id = #{userId},-->
+            <!--</if>-->
+            <!--<if test="content != null and content != ''">-->
+                <!--content = #{content},-->
+            <!--</if>-->
+            <!--<if test="commentDate != null">-->
+                <!--comment_date = #{commentDate},-->
+            <!--</if>-->
+            <!--<if test="spuId != null">-->
+                <!--spu_id = #{spuId},-->
+            <!--</if>-->
+            <!--<if test="orderId != null">-->
+                <!--order_id = #{orderId},-->
+            <!--</if>-->
+            <!--<if test="commentImage != null and commentImage != ''">-->
+                <!--comment_image = #{commentImage},-->
+            <!--</if>-->
+            <!--<if test="createUser != null and createUser != ''">-->
+                <!--create_user = #{createUser},-->
+            <!--</if>-->
+            <!--<if test="createDate != null">-->
+                <!--create_date = #{createDate},-->
+            <!--</if>-->
+            <!--<if test="updateUser != null and updateUser != ''">-->
+                <!--update_user = #{updateUser},-->
+            <!--</if>-->
+            <!--<if test="updateDate != null">-->
+                <!--update_date = #{updateDate},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--where id = #{id}-->
+    <!--</update>-->
+
+    <!--&lt;!&ndash;通过主键删除&ndash;&gt;-->
+    <!--<delete id="deleteById">-->
+        <!--delete from furniture.comment where id = #{id}-->
+    <!--</delete>-->
+
+</mapper>

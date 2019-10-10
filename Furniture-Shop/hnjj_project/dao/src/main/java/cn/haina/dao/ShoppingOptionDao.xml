@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.ShoppingOptionDao">
+    <!--添加购物车选项数据-->
+    <insert id="addshoppingoption">
+          insert into shoppingoption (shoppingId,optionId) VALUES 
+          <foreach collection="optionid" separator="," item="item">
+              (#{shoppingid},#{item})
+          </foreach>
+    </insert>
+</mapper>

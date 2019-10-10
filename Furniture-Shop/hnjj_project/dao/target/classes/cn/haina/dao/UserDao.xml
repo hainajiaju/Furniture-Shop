@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.UserDao">
+
+    <resultMap type="cn.haina.entity.User" id="UserMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="nicheng" column="nicheng" jdbcType="VARCHAR"/>
+        <result property="touxiang" column="touxiang" jdbcType="VARCHAR"/>
+        <result property="areaId" column="area_id"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="extiis" column="extiis" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="UserMap">
+        select
+          id, name, password, nicheng, touxiang, area_id, type, extiis
+        from user
+        where id = #{id} and extiis = 0
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="UserMap">
+        select
+          id, name, password, nicheng, touxiang, area_id, type, extiis
+        from user
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="UserMap">
+        select
+          id, name, password, nicheng, touxiang, area_id, type, extiis
+        from user
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+            <if test="nicheng != null and nicheng != ''">
+                and nicheng = #{nicheng}
+            </if>
+            <if test="touxiang != null and touxiang != ''">
+                and touxiang = #{touxiang}
+            </if>
+            <if test="areaId != null">
+                and area_id = #{areaId}
+            </if>
+            <if test="type != null">
+                and type = #{type}
+            </if>
+            <if test="extiis != null">
+                and extiis = #{extiis}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into user(name, password, nicheng, touxiang, area_id, type, extiis)
+        values (#{name}, #{password}, #{nicheng}, #{touxiang}, #{areaId}, #{type}, #{extiis})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update user
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="nicheng != null and nicheng != ''">
+                nicheng = #{nicheng},
+            </if>
+            <if test="touxiang != null and touxiang != ''">
+                touxiang = #{touxiang},
+            </if>
+            <if test="areaId != null">
+                area_id = #{areaId},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="extiis != null">
+                extiis = #{extiis},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from user where id = #{id}
+    </delete>
+</mapper>

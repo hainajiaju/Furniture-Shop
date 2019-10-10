@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.haina.dao.ImagesDao">
+
+    <resultMap type="cn.haina.entity.Images" id="ImagesMap">
+        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="bigImage" column="big_image" jdbcType="VARCHAR"/>
+        <result property="centerImage" column="center_image" jdbcType="VARCHAR"/>
+        <result property="smallImage" column="small_image" jdbcType="VARCHAR"/>
+        <result property="spuId" column="spu_id" jdbcType="LONG INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ImagesMap">
+        select
+          id, big_image, center_image, small_image, spu_id
+        from furniture.images
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ImagesMap">
+        select
+          id, big_image, center_image, small_image, spu_id
+        from furniture.images
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="ImagesMap">
+        select
+          id, big_image, center_image, small_image, spu_id
+        from furniture.images
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="bigImage != null and bigImage != ''">
+                and big_image = #{bigImage}
+            </if>
+            <if test="centerImage != null and centerImage != ''">
+                and center_image = #{centerImage}
+            </if>
+            <if test="smallImage != null and smallImage != ''">
+                and small_image = #{smallImage}
+            </if>
+            <if test="spuId != null">
+                and spu_id = #{spuId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into furniture.images(big_image, center_image, small_image, spu_id)
+        values (#{bigImage}, #{centerImage}, #{smallImage}, #{spuId})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update furniture.images
+        <set>
+            <if test="bigImage != null and bigImage != ''">
+                big_image = #{bigImage},
+            </if>
+            <if test="centerImage != null and centerImage != ''">
+                center_image = #{centerImage},
+            </if>
+            <if test="smallImage != null and smallImage != ''">
+                small_image = #{smallImage},
+            </if>
+            <if test="spuId != null">
+                spu_id = #{spuId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from furniture.images where id = #{id}
+    </delete>
+
+</mapper>
