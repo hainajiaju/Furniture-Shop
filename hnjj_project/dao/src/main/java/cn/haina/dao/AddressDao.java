@@ -1,9 +1,9 @@
 package cn.haina.dao;//package cn.haina.dao;
-//
-//import cn.haina.entity.Address;
-//import org.apache.ibatis.annotations.Mapper;
-//import org.apache.ibatis.annotations.Param;
-//import java.util.List;
+
+import cn.haina.entity.Address;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import java.util.List;
 //
 ///**
 // * 用户地址表(Address)表数据库访问层
@@ -11,8 +11,13 @@ package cn.haina.dao;//package cn.haina.dao;
 // * @author makejava
 // * @since 2019-09-29 11:16:55
 // */
-//@Mapper
-//public interface AddressDao {
+@Mapper
+public interface AddressDao {
+    /**
+     * 通过用户Id查询地址
+     */
+    List<Address> allAddress(int id);
+}
 //
 //    /**
 //     * 通过ID查询单条数据

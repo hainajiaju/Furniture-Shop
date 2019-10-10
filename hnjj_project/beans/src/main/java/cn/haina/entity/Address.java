@@ -2,6 +2,7 @@ package cn.haina.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 用户地址表(Address)实体类
@@ -31,7 +32,36 @@ public class Address implements Serializable {
     private String updateUser;
     //修改时间
     private Date updateDate;
+    //收货人姓名
+    private String name;
+    //默认
+    private Integer defaults;
 
+    private List<Area> Arealist;
+
+    public List<Area> getArealist() {
+        return Arealist;
+    }
+
+    public void setArealist(List<Area> arealist) {
+        Arealist = arealist;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getDefaults() {
+        return defaults;
+    }
+
+    public void setDefaults(Integer defaults) {
+        this.defaults = defaults;
+    }
 
     public Long getId() {
         return id;

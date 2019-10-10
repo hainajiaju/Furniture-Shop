@@ -13,13 +13,24 @@ import java.util.List;
  */
 @Mapper
 public interface ShoppingcartDao {
-     /**
-     * 添加购物车并返回主键
+    /**
+     * 根据用户id查询购物车详细信息
+     */
+    List<Shoppingcart> AllShoppingcarts(@Param("id") Integer id);
+    /**
+     * 修改数据
      *
-     * @param shoppingcart 实例对象
+     * * @param shoppingcart 实例对象
      * @return 影响行数
      */
-    Integer addShoppingCart(Shoppingcart shoppingcart);
+    int update(Shoppingcart shoppingcart);
+//     /**
+//     * 添加购物车并返回主键
+//     *
+//     * @param shoppingcart 实例对象
+//     * @return 影响行数
+//     */
+//    Integer addShoppingCart(Shoppingcart shoppingcart);
 
 //    /**
 //     * 通过ID查询单条数据

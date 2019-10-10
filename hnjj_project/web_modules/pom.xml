@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>prodetails</module>
+        <module>userCenter</module>
+        <module>shopping</module>
     </modules>
     <dependencies>
         <!--所有web模块公共的依赖-->
