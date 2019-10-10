@@ -6,23 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="beans" />
-        <module name="dao" />
-        <module name="prodetails" />
         <module name="shopping" />
-        <module name="userCenter" />
         <module name="utils" />
+        <module name="dao" />
+        <module name="beans" />
+        <module name="prodetails" />
+        <module name="userCenter" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="beans" target="1.8" />
-      <module name="dao" target="1.8" />
-      <module name="hnjj_project" target="1.8" />
-      <module name="prodetails" target="1.8" />
-      <module name="shopping" target="1.8" />
-      <module name="userCenter" target="1.8" />
-      <module name="utils" target="1.8" />
-      <module name="web_modules" target="1.8" />
+    <bytecodeTargetLevel target="8">
+      <module name="beans" target="8" />
+      <module name="dao" target="8" />
+      <module name="hnjj_project" target="8" />
+      <module name="prodetails" target="8" />
+      <module name="shopping" target="8" />
+      <module name="userCenter" target="8" />
+      <module name="utils" target="8" />
+      <module name="web_modules" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

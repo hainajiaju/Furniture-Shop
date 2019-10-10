@@ -100,4 +100,88 @@
     <!--<delete id="deleteById">-->
         <!--delete from user where id = #{id}-->
     <!--</delete>-->
+
+    <select id="login" resultMap="UserMap">
+        select password from user where name=#{name}
+    </select>
+
+    <select id="getUserListByMap" resultMap="UserMap">
+        select *
+        from user
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="name!=null and name!=''">
+                and name=#{name}
+            </if>
+            <if test="password!=null and password!=''">
+                and password=#{password}
+            </if>
+            <if test="nicheng!=null and nicheng!=''">
+                and nicheng=#{nicheng}
+            </if>
+            <if test="touxiang!=null and touxiang!=''">
+                and touxiang=#{touxiang}
+            </if>
+            <if test="area_id!=null and area_id!=''">
+                and area_id=#{area_id}
+            </if>
+            <if test="type!=null and type!=''">
+                and type=#{type}
+            </if>
+            <if test="extiis!=null and extiis!=''">
+                and extiis=#{extiis}
+            </if>
+        </trim>
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="userCenter" resultMap="UserMap">
+        select id, name, password, nicheng, touxiang, area_id, type, extiis from user where
+            id=#{id}
+    </select>
+
+    <update id="updatePhone" >
+        update user set
+        <if test="name!=null and name!=''">
+            name=#{name}
+        </if>
+        where
+        <if test="id!=null">
+            id=#{id}
+        </if>
+    </update>
+
+    <select id="accountSecurity" resultMap="UserMap">
+        select name,password from user
+        where
+            id=#{id}
+    </select>
+
+    <update id="updatePassword">
+        update user set
+        <if test="password!=null and password!=''">
+            password=#{password}
+        </if>
+        where
+        <if test="id!=null">
+            id=#{id}
+        </if>
+    </update>
+
+    <update id="personaldataUpdate">
+        update user set
+        <if test="nicheng!=null and nicheng!=''">
+            nicheng=#{nicheng},
+        </if>
+        <if test="touxiang!=null and touxiang!=''">
+            touxiang=#{touxiang}
+        </if>
+        <where>
+            id=#{id}
+        </where>
+    </update>
 </mapper>

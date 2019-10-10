@@ -3,9 +3,9 @@
 <mapper namespace="cn.haina.dao.OrderDao">
 
     <resultMap type="cn.haina.entity.Order" id="OrderMap">
-        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="id" column="id"/>
         <result property="orderNo" column="order_no" jdbcType="INTEGER"/>
-        <result property="userId" column="user_id" jdbcType="LONG INTEGER"/>
+        <result property="userId" column="user_id"/>
         <result property="status" column="status" jdbcType="INTEGER"/>
         <result property="orderPay" column="order_pay" jdbcType="INTEGER"/>
         <result property="orderMoney" column="order_money" jdbcType="NUMERIC"/>
@@ -13,7 +13,7 @@
         <result property="alipayNumber" column="alipay_number" jdbcType="INTEGER"/>
         <result property="content" column="content" jdbcType="VARCHAR"/>
         <result property="dispatching" column="dispatching" jdbcType="VARCHAR"/>
-        <result property="addressId" column="address_id" jdbcType="LONG INTEGER"/>
+        <result property="addressId" column="address_id"/>
         <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
         <result property="createDate" column="create_date" jdbcType="TIMESTAMP"/>
         <result property="updateUser" column="update_user" jdbcType="VARCHAR"/>
@@ -21,134 +21,139 @@
     </resultMap>
 
     <!--查询单个-->
-    <select id="queryById" resultMap="OrderMap">
-        select
-          id, order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date
-        from furniture.order
-        where id = #{id}
+<!--    <select id="queryById" resultMap="OrderMap">-->
+<!--        select-->
+<!--          id, order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date-->
+<!--        from furniture.order-->
+<!--        where id = #{id}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;查询指定行数据&ndash;&gt;-->
+<!--    <select id="queryAllByLimit" resultMap="OrderMap">-->
+<!--        select-->
+<!--          id, order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date-->
+<!--        from furniture.order-->
+<!--        limit #{offset}, #{limit}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;通过实体作为筛选条件查询&ndash;&gt;-->
+<!--    <select id="queryAll" resultMap="OrderMap">-->
+<!--        select-->
+<!--          id, order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date-->
+<!--        from furniture.order-->
+<!--        <where>-->
+<!--            <if test="id != null">-->
+<!--                and id = #{id}-->
+<!--            </if>-->
+<!--            <if test="orderNo != null">-->
+<!--                and order_no = #{orderNo}-->
+<!--            </if>-->
+<!--            <if test="userId != null">-->
+<!--                and user_id = #{userId}-->
+<!--            </if>-->
+<!--            <if test="status != null">-->
+<!--                and status = #{status}-->
+<!--            </if>-->
+<!--            <if test="orderPay != null">-->
+<!--                and order_pay = #{orderPay}-->
+<!--            </if>-->
+<!--            <if test="orderMoney != null">-->
+<!--                and order_money = #{orderMoney}-->
+<!--            </if>-->
+<!--            <if test="payMoney != null">-->
+<!--                and pay_money = #{payMoney}-->
+<!--            </if>-->
+<!--            <if test="alipayNumber != null">-->
+<!--                and alipay_number = #{alipayNumber}-->
+<!--            </if>-->
+<!--            <if test="content != null and content != ''">-->
+<!--                and content = #{content}-->
+<!--            </if>-->
+<!--            <if test="dispatching != null and dispatching != ''">-->
+<!--                and dispatching = #{dispatching}-->
+<!--            </if>-->
+<!--            <if test="addressId != null">-->
+<!--                and address_id = #{addressId}-->
+<!--            </if>-->
+<!--            <if test="createUser != null and createUser != ''">-->
+<!--                and create_user = #{createUser}-->
+<!--            </if>-->
+<!--            <if test="createDate != null">-->
+<!--                and create_date = #{createDate}-->
+<!--            </if>-->
+<!--            <if test="updateUser != null and updateUser != ''">-->
+<!--                and update_user = #{updateUser}-->
+<!--            </if>-->
+<!--            <if test="updateDate != null">-->
+<!--                and update_date = #{updateDate}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;新增所有列&ndash;&gt;-->
+<!--    <insert id="insert" keyProperty="id" useGeneratedKeys="true">-->
+<!--        insert into furniture.order(order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date)-->
+<!--        values (#{orderNo}, #{userId}, #{status}, #{orderPay}, #{orderMoney}, #{payMoney}, #{alipayNumber}, #{content}, #{dispatching}, #{addressId}, #{createUser}, #{createDate}, #{updateUser}, #{updateDate})-->
+<!--    </insert>-->
+
+<!--    &lt;!&ndash;通过主键修改数据&ndash;&gt;-->
+<!--    <update id="update">-->
+<!--        update furniture.order-->
+<!--        <set>-->
+<!--            <if test="orderNo != null">-->
+<!--                order_no = #{orderNo},-->
+<!--            </if>-->
+<!--            <if test="userId != null">-->
+<!--                user_id = #{userId},-->
+<!--            </if>-->
+<!--            <if test="status != null">-->
+<!--                status = #{status},-->
+<!--            </if>-->
+<!--            <if test="orderPay != null">-->
+<!--                order_pay = #{orderPay},-->
+<!--            </if>-->
+<!--            <if test="orderMoney != null">-->
+<!--                order_money = #{orderMoney},-->
+<!--            </if>-->
+<!--            <if test="payMoney != null">-->
+<!--                pay_money = #{payMoney},-->
+<!--            </if>-->
+<!--            <if test="alipayNumber != null">-->
+<!--                alipay_number = #{alipayNumber},-->
+<!--            </if>-->
+<!--            <if test="content != null and content != ''">-->
+<!--                content = #{content},-->
+<!--            </if>-->
+<!--            <if test="dispatching != null and dispatching != ''">-->
+<!--                dispatching = #{dispatching},-->
+<!--            </if>-->
+<!--            <if test="addressId != null">-->
+<!--                address_id = #{addressId},-->
+<!--            </if>-->
+<!--            <if test="createUser != null and createUser != ''">-->
+<!--                create_user = #{createUser},-->
+<!--            </if>-->
+<!--            <if test="createDate != null">-->
+<!--                create_date = #{createDate},-->
+<!--            </if>-->
+<!--            <if test="updateUser != null and updateUser != ''">-->
+<!--                update_user = #{updateUser},-->
+<!--            </if>-->
+<!--            <if test="updateDate != null">-->
+<!--                update_date = #{updateDate},-->
+<!--            </if>-->
+<!--        </set>-->
+<!--        where id = #{id}-->
+<!--    </update>-->
+
+<!--    &lt;!&ndash;通过主键删除&ndash;&gt;-->
+<!--    <delete id="deleteById">-->
+<!--        delete from furniture.order where id = #{id}-->
+<!--    </delete>-->
+
+    <select id="userOrders" resultMap="OrderMap">
+        SELECT * FROM `order` WHERE
+            user_id=#{id}
     </select>
-
-    <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="OrderMap">
-        select
-          id, order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date
-        from furniture.order
-        limit #{offset}, #{limit}
-    </select>
-
-    <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="OrderMap">
-        select
-          id, order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date
-        from furniture.order
-        <where>
-            <if test="id != null">
-                and id = #{id}
-            </if>
-            <if test="orderNo != null">
-                and order_no = #{orderNo}
-            </if>
-            <if test="userId != null">
-                and user_id = #{userId}
-            </if>
-            <if test="status != null">
-                and status = #{status}
-            </if>
-            <if test="orderPay != null">
-                and order_pay = #{orderPay}
-            </if>
-            <if test="orderMoney != null">
-                and order_money = #{orderMoney}
-            </if>
-            <if test="payMoney != null">
-                and pay_money = #{payMoney}
-            </if>
-            <if test="alipayNumber != null">
-                and alipay_number = #{alipayNumber}
-            </if>
-            <if test="content != null and content != ''">
-                and content = #{content}
-            </if>
-            <if test="dispatching != null and dispatching != ''">
-                and dispatching = #{dispatching}
-            </if>
-            <if test="addressId != null">
-                and address_id = #{addressId}
-            </if>
-            <if test="createUser != null and createUser != ''">
-                and create_user = #{createUser}
-            </if>
-            <if test="createDate != null">
-                and create_date = #{createDate}
-            </if>
-            <if test="updateUser != null and updateUser != ''">
-                and update_user = #{updateUser}
-            </if>
-            <if test="updateDate != null">
-                and update_date = #{updateDate}
-            </if>
-        </where>
-    </select>
-
-    <!--新增所有列-->
-    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into furniture.order(order_no, user_id, status, order_pay, order_money, pay_money, alipay_number, content, dispatching, address_id, create_user, create_date, update_user, update_date)
-        values (#{orderNo}, #{userId}, #{status}, #{orderPay}, #{orderMoney}, #{payMoney}, #{alipayNumber}, #{content}, #{dispatching}, #{addressId}, #{createUser}, #{createDate}, #{updateUser}, #{updateDate})
-    </insert>
-
-    <!--通过主键修改数据-->
-    <update id="update">
-        update furniture.order
-        <set>
-            <if test="orderNo != null">
-                order_no = #{orderNo},
-            </if>
-            <if test="userId != null">
-                user_id = #{userId},
-            </if>
-            <if test="status != null">
-                status = #{status},
-            </if>
-            <if test="orderPay != null">
-                order_pay = #{orderPay},
-            </if>
-            <if test="orderMoney != null">
-                order_money = #{orderMoney},
-            </if>
-            <if test="payMoney != null">
-                pay_money = #{payMoney},
-            </if>
-            <if test="alipayNumber != null">
-                alipay_number = #{alipayNumber},
-            </if>
-            <if test="content != null and content != ''">
-                content = #{content},
-            </if>
-            <if test="dispatching != null and dispatching != ''">
-                dispatching = #{dispatching},
-            </if>
-            <if test="addressId != null">
-                address_id = #{addressId},
-            </if>
-            <if test="createUser != null and createUser != ''">
-                create_user = #{createUser},
-            </if>
-            <if test="createDate != null">
-                create_date = #{createDate},
-            </if>
-            <if test="updateUser != null and updateUser != ''">
-                update_user = #{updateUser},
-            </if>
-            <if test="updateDate != null">
-                update_date = #{updateDate},
-            </if>
-        </set>
-        where id = #{id}
-    </update>
-
-    <!--通过主键删除-->
-    <delete id="deleteById">
-        delete from furniture.order where id = #{id}
-    </delete>
 
 </mapper>
