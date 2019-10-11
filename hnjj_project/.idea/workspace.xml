@@ -167,6 +167,7 @@
     <ignored path="$PROJECT_DIR$/web_modules/userCenter/target/" />
     <ignored path="$PROJECT_DIR$/web_modules/shopping/target/" />
     <ignored path="$PROJECT_DIR$/web_modules/search/target/" />
+    <ignored path="$PROJECT_DIR$/web_modules/seckill/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,88 +179,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#0#371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/beans/Sorts.java">
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/SeckillApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/KeyPrefix.java">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="25" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/RabbitmqSender.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/test/java/cn/haina/SearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/service/OrderService.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/SearchBoot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/controller/SeckillController.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/controller/SortController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="27" column="62" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="62" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/RedisClusterConfig.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/myconfig/MyKeyGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/MiaoshaUserKey.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/myconfig/RedisCacheConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/resources/templates/hello.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/myconfig/RedisConfigs.java">
+        <entry file="file://$PROJECT_DIR$/web_modules/prodetails/src/main/java/cn/haina/prodetails/service/ShoppingCartServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="72">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -281,6 +261,7 @@
       <find>personaldataUpdate</find>
       <find>accountSecurity</find>
       <find>userOrders</find>
+      <find>addShoppingCart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -289,7 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/src/main/java/cn/haina/beans/Attributeoption.java" />
         <option value="$PROJECT_DIR$/beans/pom.xml" />
         <option value="$PROJECT_DIR$/utils/pom.xml" />
         <option value="$PROJECT_DIR$/web_modules/prodetails/pom.xml" />
@@ -298,7 +278,6 @@
         <option value="$PROJECT_DIR$/web_modules/prodetails/src/main/java/cn/haina/prodetails/service/CommentService.java" />
         <option value="$PROJECT_DIR$/web_modules/prodetails/src/main/java/cn/haina/prodetails/service/SortService.java" />
         <option value="$PROJECT_DIR$/web_modules/prodetails/src/main/java/cn/haina/prodetails/service/SpecificationoptionService.java" />
-        <option value="$PROJECT_DIR$/web_modules/pom.xml" />
         <option value="$PROJECT_DIR$/dao/pom.xml" />
         <option value="$PROJECT_DIR$/beans/src/main/java/cn/haina/entity/Address.java" />
         <option value="$PROJECT_DIR$/web_modules/userCenter/src/main/java/serivce/AddressService.java" />
@@ -336,15 +315,20 @@
         <option value="$PROJECT_DIR$/web_modules/search/pom.xml" />
         <option value="$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.java" />
         <option value="$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.xml" />
+        <option value="$PROJECT_DIR$/web_modules/pom.xml" />
+        <option value="$PROJECT_DIR$/beans/src/main/java/cn/haina/entity/Seckill.java" />
+        <option value="$PROJECT_DIR$/web_modules/prodetails/src/main/java/cn/haina/prodetails/service/ShoppingCartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web_modules/seckill/pom.xml" />
+        <option value="$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/MiaoshaUserKey.java" />
+        <option value="$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/service/UserService.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\apache-maven-3.6.1\mvn_repo" />
-        <option name="mavenHome" value="D:/apache-maven-3.6.1/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -370,10 +354,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="2" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="-10" />
+    <option name="width" value="685" />
+    <option name="height" value="730" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -394,71 +377,26 @@
             <path>
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="haina" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -466,7 +404,7 @@
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -475,7 +413,7 @@
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -485,7 +423,7 @@
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -496,118 +434,26 @@
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="haina" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
               <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="haina" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="SortController" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="haina" type="462c0819:PsiDirectoryNode" />
-              <item name="SearchBoot" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="haina" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="haina" type="462c0819:PsiDirectoryNode" />
-              <item name="SearchTest" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hnjj_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hnjj_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="seckill" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -626,14 +472,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.7" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_modules/search/src/test/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_modules/seckill/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -643,14 +489,15 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.haina.entity" />
       <recent name="cn.haina.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MI\Desktop\aaa\hnjj_project\web_modules\seckill\src\main\resources" />
+      <recent name="C:\Users\MI\Desktop\aaa\hnjj_project\web_modules\seckill\src\main\java" />
+      <recent name="C:\Users\MI\Desktop\aaa\hnjj_project\dao\src\main\java\cn\haina\dao" />
       <recent name="G:\adad\hnjj_project\web_modules\search\src\test\java" />
       <recent name="G:\adad\hnjj_project\web_modules\search\src\main\resources" />
-      <recent name="G:\adad\hnjj_project\web_modules\search\src\main\java" />
-      <recent name="G:\adad\hnjj_project\web_modules" />
-      <recent name="E:\hnjj_project\web_modules\userCenter\src\main\java\cn\haina" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -665,7 +512,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SearchBoot">
+  <component name="RunManager" selected="Spring Boot.SeckillApplication">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -728,6 +575,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeckillApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="seckill" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.haina.seckill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.haina.seckill.SeckillApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShoppingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="shopping" />
       <extension name="coverage">
@@ -767,14 +627,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.SearchTest.context" />
       <item itemvalue="Spring Boot.UserCenterApplication" />
       <item itemvalue="Spring Boot.ProdetailsApplication" />
       <item itemvalue="Spring Boot.ShoppingApplication" />
-      <item itemvalue="JUnit.SearchTest.context" />
       <item itemvalue="Spring Boot.SearchBoot" />
+      <item itemvalue="Spring Boot.SeckillApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SeckillApplication" />
         <item itemvalue="Spring Boot.SearchBoot" />
         <item itemvalue="JUnit.SearchTest.context" />
         <item itemvalue="Spring Boot.ProdetailsApplication" />
@@ -796,6 +658,8 @@
       <workItem from="1570666484154" duration="4123000" />
       <workItem from="1570676985790" duration="10956000" />
       <workItem from="1570711706177" duration="2937000" />
+      <workItem from="1570754968435" duration="133000" />
+      <workItem from="1570755117428" duration="518000" />
     </task>
     <servers />
   </component>
@@ -805,7 +669,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34073000" />
+    <option name="totallyTimeSpent" value="34724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,10 +681,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34114978" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.42885906" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -828,9 +692,10 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="MyBatis Log" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942554" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5139116" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5139116" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -838,11 +703,12 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32942554" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.4727891" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.47150996" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32993197" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="15" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -854,6 +720,8 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" weight="0.32980332" />
+      <window_info anchor="right" id="Word Book" order="11" side_tool="true" />
+      <window_info anchor="right" id="RestServices" order="12" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3419062" />
@@ -896,137 +764,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web_modules/shopping/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/shopping/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/serivce/AddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/serivce/AddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/controller/AddressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/AddressDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/exception/UserLoginFailedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/tools/CASUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/tools/MD5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/config/CASAutoConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/config/CorsWebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/userCenter/src/main/java/cn/haina/serivce/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/shopping/src/main/java/cn/haina/shopping/controller/ShoppingcartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="64" column="53" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/ShoppingcartDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1626">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/ShoppingOptionDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1038,13 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -1217,23 +947,9 @@
     <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/beans/Sorts.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_modules/search/src/test/java/cn/haina/SearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="247">
           <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
         </state>
       </provider>
@@ -1241,7 +957,14 @@
     <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/SearchBoot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/controller/SortController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1261,22 +984,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/myconfig/RedisConfigs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
+        <state relative-caret-position="114">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/java/cn/haina/controller/SortController.java">
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="62" />
+        <state relative-caret-position="361">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SortDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_modules/search/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
+        <state relative-caret-position="190">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beans/src/main/java/cn/haina/entity/Seckill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SeckillDao.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/SeckillDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/src/main/java/cn/haina/dao/ShoppingcartDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/controller/DemoController.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/RabbitmqReceiver.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/KeyPrefix.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/RabbitmqSender.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/controller/SeckillController.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/RedisClusterConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/config/MiaoshaUserKey.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/resources/templates/hello.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/prodetails/src/main/java/cn/haina/prodetails/service/ShoppingCartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/SeckillApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_modules/seckill/src/main/java/cn/haina/seckill/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#371#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1332,7 +1143,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>userCenter</last-edited>
+          <last-edited>beans</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

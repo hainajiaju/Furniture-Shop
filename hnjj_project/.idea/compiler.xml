@@ -9,6 +9,7 @@
         <module name="search" />
         <module name="shopping" />
         <module name="utils" />
+        <module name="seckill" />
         <module name="dao" />
         <module name="beans" />
         <module name="prodetails" />
@@ -21,6 +22,7 @@
       <module name="hnjj_project" target="1.8" />
       <module name="prodetails" target="1.8" />
       <module name="search" target="1.8" />
+      <module name="seckill" target="1.8" />
       <module name="shopping" target="1.8" />
       <module name="userCenter" target="6" />
       <module name="utils" target="1.8" />

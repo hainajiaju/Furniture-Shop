@@ -1,0 +1,52 @@
+# 数据库连接驱动
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    url: jdbc:mysql:///furniture?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&autoReconnect=true
+    password: root
+
+  # 默认拦截所有请求
+  mvc:
+    static-path-pattern: /**
+  jackson:
+    date-format: yyyy-MM-dd hh:mm:ss
+    time-zone: GMT+8
+  
+  # thymeleaf模板设置
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+
+# redis集群配置服务器等信息
+redis:
+  cluster:
+    ports:
+        - 8001
+        - 8002
+        - 8003
+        - 8004
+        - 8005
+        - 8006
+    host: 192.168.150.134
+    poolConfig:
+       max-total: 8
+       max-idle: 8
+       max-wait-millis: -1
+       min-idle: 0
+
+  # rabbitmq设置
+  rabbitmq:
+    host: 47.98.100.242
+    port: 5672
+    username: sang
+    password: 123
+
+# mybatis控制台输出sql
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

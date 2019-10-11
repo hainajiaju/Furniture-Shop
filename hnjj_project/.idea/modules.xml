@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/hnjj_project.iml" filepath="$PROJECT_DIR$/hnjj_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/web_modules/prodetails/prodetails.iml" filepath="$PROJECT_DIR$/web_modules/prodetails/prodetails.iml" />
       <module fileurl="file://$PROJECT_DIR$/web_modules/search/search.iml" filepath="$PROJECT_DIR$/web_modules/search/search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_modules/seckill/seckill.iml" filepath="$PROJECT_DIR$/web_modules/seckill/seckill.iml" />
       <module fileurl="file://$PROJECT_DIR$/web_modules/shopping/shopping.iml" filepath="$PROJECT_DIR$/web_modules/shopping/shopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/web_modules/userCenter/userCenter.iml" filepath="$PROJECT_DIR$/web_modules/userCenter/userCenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
