@@ -14,7 +14,7 @@ public class Order implements Serializable {
     //订单id
     private Long id;
     //订单号
-    private Integer orderNo;
+    private String orderNo;
     //用户id
     private Long userId;
     //订单状态（ 0：未支付  1：已支付  2：已取消   ）
@@ -51,11 +51,11 @@ public class Order implements Serializable {
         this.id = id;
     }
 
-    public Integer getOrderNo() {
+    public String getOrderNo() {
         return orderNo;
     }
 
-    public void setOrderNo(Integer orderNo) {
+    public void setOrderNo(String orderNo) {
         this.orderNo = orderNo;
     }
 
